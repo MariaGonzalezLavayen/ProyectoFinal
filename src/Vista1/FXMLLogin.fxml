@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="258.0" prefWidth="334.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="proyectoheroe.FXMLDocumentController">
+    <children>
+      <ImageView fitHeight="258.0" fitWidth="367.0" layoutX="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Downloads/Login.jpg" />
+         </image>
+      </ImageView>
+        <Button fx:id="btnIniciarSeccion" layoutX="133.0" layoutY="219.0" onAction="#Iniciar" text="Iniciar Secion ">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font></Button>
+      <TextField fx:id="txtUsuario" layoutX="118.0" layoutY="51.0" promptText="Ingrese Usuario " />
+      <PasswordField fx:id="txtContraseña" layoutX="118.0" layoutY="165.0" prefHeight="24.0" prefWidth="149.0" promptText="Ingrese Contraseña">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </PasswordField>
+        <Label fx:id="Usuario" layoutX="41.0" layoutY="55.0" minHeight="16" minWidth="51.0" prefHeight="17.0" prefWidth="51.0" text="Usuario:">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.007662835249042145">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.007662835249042145">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font></Label>
+      <Label fx:id="contraseña" layoutX="41.0" layoutY="169.0" minHeight="16" minWidth="69" text="Contraseña:" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
