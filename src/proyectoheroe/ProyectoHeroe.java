@@ -5,6 +5,7 @@
 package proyectoheroe;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.application.Application;
@@ -21,25 +22,17 @@ import javafx.stage.Stage;
 public class ProyectoHeroe extends Application {
     
     @Override
-    
-    public void start(Stage primaryStage){
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/FXMLLoginController.fxml"));
-            Parent root = loader.load();
-            Object FXMLLoginController = loader.getController();
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException ex) {
-            Logger.getLogger(ProyectoHeroe.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    
-  }
-        /**
+    public void start(Stage stage) throws IOException, SQLException {
+        
+        Parent root = FXMLLoader.load(getClass().getResource("ViewLogin.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    /**
      * @param args the command line arguments
      */
-
     public static void main(String[] args) {
         launch(args);
     }

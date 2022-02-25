@@ -8,30 +8,37 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="258.0" prefWidth="334.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="proyectoheroe.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="302.0" prefWidth="545.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyectoheroe.FXMLDocumentController">
     <children>
-      <ImageView fitHeight="258.0" fitWidth="367.0" layoutX="-3.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="322.0" fitWidth="551.0" layoutX="-6.0" layoutY="-6.0" opacity="0.53" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../Downloads/Login.jpg" />
+            <Image url="@../../../../../Downloads/WhatsApp%20Image%202022-02-23%20at%2020.12.59.jpeg" />
          </image>
       </ImageView>
-        <Button fx:id="btnIniciarSeccion" layoutX="133.0" layoutY="219.0" onAction="#Iniciar" text="Iniciar Secion ">
+        <Button fx:id="btnIniciarSeccion" layoutX="339.0" layoutY="228.0" onAction="#Iniciar" prefHeight="32.0" prefWidth="159.0" text="Iniciar Secion ">
          <font>
-            <Font name="System Italic" size="12.0" />
+            <Font name="System Bold Italic" size="16.0" />
          </font></Button>
-      <TextField fx:id="txtUsuario" layoutX="118.0" layoutY="51.0" promptText="Ingrese Usuario " />
-      <PasswordField fx:id="txtContraseña" layoutX="118.0" layoutY="165.0" prefHeight="24.0" prefWidth="149.0" promptText="Ingrese Contraseña">
+      <TextField fx:id="txtUsuario" layoutX="254.0" layoutY="80.0" promptText="Ingrese Usuario " />
+      <PasswordField fx:id="txtContraseña" layoutX="254.0" layoutY="159.0" prefHeight="24.0" prefWidth="149.0" promptText="Ingrese Contraseña">
          <font>
             <Font size="11.0" />
          </font>
       </PasswordField>
-        <Label fx:id="Usuario" layoutX="41.0" layoutY="55.0" minHeight="16" minWidth="51.0" prefHeight="17.0" prefWidth="51.0" text="Usuario:">
+        <Label fx:id="Usuario" layoutX="131.0" layoutY="70.0" minHeight="16" minWidth="51.0" prefHeight="36.0" prefWidth="107.0" text="Usuario:">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font></Label>
+      <Label fx:id="contraseña" layoutX="115.0" layoutY="155.0" minHeight="16" minWidth="69" text="Contraseña:">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
          <textFill>
-            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+            <LinearGradient endX="1.0" endY="1.0">
                <stops>
                   <Stop>
                      <color>
@@ -45,24 +52,17 @@
                   </Stop>
                   <Stop offset="0.007662835249042145">
                      <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
+                        <Color red="0.06578947603702545" green="0.05787036940455437" blue="0.05787036940455437" />
                      </color>
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
+                        <Color red="0.06578947603702545" green="0.05787036940455437" blue="0.05787036940455437" />
                      </color>
                   </Stop>
                </stops>
-            </RadialGradient>
+            </LinearGradient>
          </textFill>
-         <font>
-            <Font name="System Italic" size="13.0" />
-         </font></Label>
-      <Label fx:id="contraseña" layoutX="41.0" layoutY="169.0" minHeight="16" minWidth="69" text="Contraseña:" textFill="WHITE">
-         <font>
-            <Font name="System Italic" size="12.0" />
-         </font>
       </Label>
     </children>
 </AnchorPane>

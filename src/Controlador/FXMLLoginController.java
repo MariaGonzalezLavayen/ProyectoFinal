@@ -4,20 +4,24 @@
  */
 package Controlador;
 
-import Dao.LoginDao;
-import Dao.LoginDaoImpl;
-import Modelo.Login;
+import java.io.IOException;
 import java.net.URL;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Usuario
@@ -41,29 +45,10 @@ public class FXMLLoginController implements Initializable {
 
     @FXML
     void Iniciar(ActionEvent event) {
-        LoginDao logindao = new LoginDaoImpl();
-        Login login = logindao.read(this.txtUsuario.getText());
-        
-        if (login != null){
-            this.txtUsuario.setText(login.getUsuario());
-            this.txtContraseña.setText(login.getContraseña());
-//            this.cboRegion.getSelectionModel().getSelectedItem();
-//            this.cboRegion.selectionModelProperty()
-    
-        }
-        else{
-             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setHeaderText(null);
-            alert.setContentText("No existe el codigo del pais" + this.txtUsuario.getText()+ "en la base de datos");
-            alert.showAndWait();
-        }
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
 }
-
-
